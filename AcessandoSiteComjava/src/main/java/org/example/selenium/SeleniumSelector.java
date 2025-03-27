@@ -1,14 +1,15 @@
 package org.example.selenium;
 
+import org.example.selenium.interfaces.SeleniumSelectorInterfaces;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.*;
 
-public class SeleniumSelector {
+public class SeleniumSelector  implements SeleniumSelectorInterfaces {
 
-    public static String pegarInformacao(String linkText, String path){
+    public  String pegarInformacao(String linkText, String path){
         System.setProperty("webdriver.chrome.driver", "/home/guilherme/Downloads/chromedriver-linux64/chromedriver");
         ChromeOptions options = new ChromeOptions();
         WebDriver driver = new ChromeDriver(options);
